@@ -1,0 +1,39 @@
+body {
+    background-color: aliceblue;
+}
+
+div {
+    border: 1px solid black;
+    margin: 20px;
+}
+
+span {
+    border: 1px solid black;
+    margin: 20px;
+    display: inline-block;
+}
+
+p {
+    color: red;
+}
+
+.comments {
+    background-color: blue;
+}
+
+.dolphin {
+    color: brown;
+}
+
+#example {
+    background-color: green;
+}
+
+ol li {
+    color: purple;
+}
+
+li {
+    color: gold;
+}
+
