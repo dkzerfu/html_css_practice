@@ -1,90 +1,70 @@
-console.log('hi');
-// This is a comment
-// console.log("this wont run")
+let myArr = [];
+let myObj = {};
 
-/**
- * This 
- * is
- * A multiline
- * Comment
- */
+// Key-Value pairs
+// Object literal syntax
+var friend = {
+    firstName: "Jane",
+    lastName: "Doe"
+}
 
-// Numbers
-// Integers
-console.log(1 + 2);
-// Floats:
-console.log(2.718)
-console.log(0.1 * 0.2);
-console.log((2 + 2) * 3);
- 
-//  Strings
-console.log("john")
-console.log("jane")
+// myArr[index]
+// Accessing w/ the dot notation
+console.log(friend.firstName);
+// Accessing w/ the bracket notation
+console.log(friend["firstName"]);
 
-// Type Inferencing / Coercsion 
-console.log("1" + 1)
+friend.middleName = "Jersey";
 
-// Boolean
-// true or false
+// Directly change the value of a key-value pair
+friend.middleName = "Sung";
 
-// Modulus
-console.log(131313131 % 2);
-console.log(131313132 % 2);
-
-// Math.pow
-console.log(Math.pow(3, 2))
-// Math.sqrt
-console.log(Math.sqrt(4))
-
-// Gives a random float between [0-1]
-console.log("Random num 0-1: " + Math.random())
-// Give a Number between [0-10]
-console.log("Random num 0-10: " + Math.floor(Math.random() * 10));
-
-// Variables
-// Note the naming convention is camelCase
-var myNumber = 1;
-let myString = "hey yall";
-
-// function doStuff() {
-//     let thisDoesntExistOutsideTheFunc = 10;
-// }
-
-// console.log(thisDoesntExistOutsideTheFunc)
-
-// converting a number type to a string type
-var anotherNumber = 1;
-var anotherString = anotherNumber.toString();
-
-console.log(typeof anotherString);
-
-// Const Variables
-// const x = 10;
-// x = 11;
-
-// console.log(x);
-
-// String myString2 = "asdf";
-// int myInt2 = 123;
+// Delete a key-value pair by the key
+delete friend.middleName;
 
 
-// Common String / Number methods
-console.log(parseInt("123"))
-console.log(parseFloat("3.14") + parseFloat("3.14"))
-// 3.143.14
+// Different ways to declare a function
+// Standard function declaration
+function sayHello() {
+    console.log("hello!");
+}
 
-let stringToBeSplit = "123,456";
-console.log(stringToBeSplit.split(','));
+// Anonymous function assigned to a variable
+var sayHelloAgain = function() {
+    console.log("hello!");
+}
 
-let alphabet = "abcdef";
-console.log(alphabet.indexOf('b'));
+// Arrow functions
+var sayHelloForAThirdTime = () => {
+    console.log("hello!");
+}
 
-let uppercaseAlphabet = alphabet.toUpperCase();
-console.log(uppercaseAlphabet)
-console.log(uppercaseAlphabet.toLowerCase());
 
-let stringReplace = "old person";
-let newString = stringReplace.replace('old', 'new');
+friend = {
+    firstName: "Henry",
+    lastName: "Hong",
+    sayHello: function() {
+        console.log("Hi!");
+    }
+}
 
-console.log(stringReplace)
-console.log(newString)
+// THIS keyword
+var firstProgrammer = {
+    name: "Ada Lovelace",
+    rank: "First!",
+    brag: function() {
+        console.log(`I'm ${this.name} and I'm ${this.rank}`);
+    }
+}
+
+// Looping over objects
+var car = {
+    wheels: 4,
+    doors: 2,
+    seats: 5
+}
+
+// For in loops are great for iterating over objects
+for (let key in car) {
+    console.log(`My car has ${car[key]} ${key}`);
+}
