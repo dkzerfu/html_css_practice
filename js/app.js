@@ -68,3 +68,73 @@ var car = {
 for (let key in car) {
     console.log(`My car has ${car[key]} ${key}`);
 }
+
+
+
+
+// #1
+var dude = {
+    firstName: "John",
+    lastName: "Doe",
+    age: 36,
+    street: "1234 Park st."
+}
+
+// #2
+dude.street = "1234 Park ln."
+
+// #3
+let people = [
+    {
+        firstName: "Moe",
+        lastName: "Doe",
+        age: 31,
+        street: "1234 Park st.",
+        socialSecurityNumber: "123-45-6789"
+    },
+    {
+        firstName: "larry",
+        lastName: "Doe",
+        age: 36,
+        street: "1234 Spark st."
+    },
+    {
+        firstName: "Mary",
+        lastName: "Doe",
+        age: 31,
+        street: "1231 Park st."
+    }
+]
+
+var darcy = {
+    firstName: "Mary",
+    lastName: "Doe",
+    age: 31,
+    street: "1231 Park st."
+}
+people.push(darcy)
+
+
+peopleDictionary = {
+    person1: {
+        
+    }
+}
+
+// this is elanor... for now until the array changes
+let seventhPerson = people[6];
+
+// #4
+delete people[2].street;
+
+let myObjArr = {
+    firstName: ["moe", "larry", "mary"],
+    age: [31, 32, 33],
+    street: ["declined to provide address", "1266 street", "99 street"]
+}
+
+console.log(myObjArr.street)
+
+
+//DRY
+// DONT REPEAT YOURSELF
